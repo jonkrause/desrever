@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ title }}</h1>
-    <textarea v-model="tempText" rows="10" cols="60" placeholder="Text goes here..."></textarea>
+    <textarea class="textBox" rows="10" cols="60" v-model="tempText" placeholder="Text goes here..."></textarea>
     <br>
     <button @click="setText">reverse it</button> <button @click="alertCopy" v-clipboard:copy="finalText">copy text</button>
     <br>
@@ -22,6 +22,9 @@ export default {
       finalText: ''
     }
   },
+  mounted: function() {
+    console.log('wtfzlol')
+  },
   methods: {
     setText: function() {
       this.finalText = this.tempText
@@ -32,7 +35,7 @@ export default {
     alertCopy() {
       this.$swal({
         text: 'copied to clipboard',
-        timer: 1500,
+        timer: 800,
         showConfirmButton: false,
         backdrop: `rgba(0, 0, 123, 0.5)`
       })
@@ -57,4 +60,6 @@ li {
 a {
   color: #42b983;
 }
+
+
 </style>
