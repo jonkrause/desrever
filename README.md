@@ -1,3 +1,5 @@
 # desrever
+A text-reverser made with Vuejs and hosted by netlify
 
-> desrever
+## [boobsbuttsanddicks.com] (http://boobsbuttsanddicks.com)
+
